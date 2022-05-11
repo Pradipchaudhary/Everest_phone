@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f2f9fc;
+}
+
+/* box-shadow: 0 -3px 12px 0 #000; */
+
+/* === Navbar === */
+#navbar {
+  background: #fff;
+}
+#navbar a.navbar-brand img {
+  max-width: 180px;
+}
+#navbar li.nav-item a.active {
+  color: #3399ff;
+}
+
+/* ===  Side Filter === */
+.side_filter {
+  padding: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+.side_filter .heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 10px;
+}
+
+/* === Main Content === */
+.main_content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  padding: 10px;
+}
