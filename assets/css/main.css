@@ -56,10 +56,11 @@ body {
 }
 
 .accordion .accordion-item {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5 !important;
+  border: none;
 }
 .accordion .accordion-item button[aria-expanded="true"] {
-  border-bottom: 1px solid #03b5d2;
+  border-bottom: 1px solid #389cff;
 }
 .accordion button {
   position: relative;
@@ -67,23 +68,27 @@ body {
   text-align: left;
   width: 100%;
   padding: 1em 0;
-  color: #7288a2;
+  color: #333;
+  /* color: #7288a2; */
   font-size: 1.15rem;
-  font-weight: 400;
+  font-weight: 500;
   border: none;
   background: none;
   outline: none;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
 }
 .accordion button:hover,
 .accordion button:focus {
   cursor: pointer;
-  color: #03b5d2;
+  color: #333;
 }
 .accordion button:hover::after,
 .accordion button:focus::after {
   cursor: pointer;
-  color: #03b5d2;
-  border: 1px solid #03b5d2;
+  color: #389cff;
+  border: 1px solid #389cff;
 }
 .accordion button .accordion-title {
   padding: 1em 1.5em 1em 0;
@@ -119,14 +124,14 @@ body {
   background: currentColor;
 }
 .accordion button[aria-expanded="true"] {
-  color: #03b5d2;
+  color: #389cff;
 }
 .accordion button[aria-expanded="true"] .icon::after {
   width: 0;
 }
 .accordion button[aria-expanded="true"] + .accordion-content {
   opacity: 1;
-  max-height: 9em;
+  max-height: 100%;
   transition: all 200ms linear;
   will-change: opacity, max-height;
 }
@@ -142,6 +147,87 @@ body {
   font-weight: 300;
   margin: 2em 0;
 }
-.accordion .accordion-content button {
+
+/* === Button Design === */
+.accordion .accordion-content .btn {
   display: inline-block;
+}
+.accordion .accordion-content .btn-buy {
+  border: 1px solid #389cff;
+  padding: 0px 10px;
+  color: #eee;
+  background: #389cff;
+  font-size: 0.8rem;
+  padding-bottom: 3px;
+  margin: 0px;
+}
+
+.accordion .accordion-content .btn-offer {
+  border: 1px solid #eee;
+  padding: 0px 10px;
+  color: #333;
+  background: #eee;
+  font-size: 0.8rem;
+  padding-bottom: 3px;
+  margin: 0px;
+}
+.accordion .accordion-content .myalert {
+  color: #389cff;
+}
+
+/* Custom CSS for borderless */
+.borderless td,
+.borderless th {
+  border: none !important;
+  padding: 2px !important;
+}
+.borderless thead,
+.borderless tbody {
+  border: none !important;
+}
+
+.table_item {
+  width: 70%;
+}
+
+.item_heading .accordion-title {
+  width: 50%;
+}
+.item_heading .accordion-title span {
+  display: block;
+  font-size: 0.75rem;
+  color: #777;
+  font-weight: 400;
+}
+.item_heading .qty_head {
+  width: 80px;
+  min-width: 80px;
+  max-width: 160px;
+  text-align: center;
+}
+
+.item_heading .pry_head {
+  width: 80px;
+  min-width: 80px;
+  max-width: 160px;
+  text-align: center;
+}
+.item_heading .qty_head span {
+  display: block;
+  color: #777;
+  font-size: 0.9rem;
+}
+.item_heading .pry_head span {
+  display: block;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.stre_name {
+  margin-right: 30px;
+}
+
+.accordion button[aria-expanded="true"] .qty_head,
+.accordion button[aria-expanded="true"] .pry_head {
+  display: none;
 }
